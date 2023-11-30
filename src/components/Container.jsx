@@ -2,7 +2,8 @@ import React from 'react';
 
 const styles={
     containerStyle:{
-        marginTop: "2em"
+        marginTop: "2em", 
+        marginBottom: "2em"
     }
 };
 
