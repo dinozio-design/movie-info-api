@@ -1,5 +1,6 @@
 {
   "name": "movie-info-api",
+  "homepage": "https://dinozio-design.github.io/movie-info-api",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -11,9 +12,12 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4",
     "axios": "^1.6.2",
-    "bootstrap": "^5.3.2"
+    "bootstrap": "^5.3.2",
+    "gh-pages": "6.1.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
