@@ -4,8 +4,7 @@ const styles = {
     footerStyle:{
         backgroundColor: "#282c34",
         minHeight: "10vh",
-        position: "absolute",
-        bottom: "0",
+        marginTop: "auto",
         width: "100%",
         display: "flex",
         flexDirection: "column",
