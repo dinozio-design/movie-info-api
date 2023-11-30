@@ -1,13 +1,13 @@
 import React from "react";
 
-export default function SearchForm(){
+export default function SearchForm(props){
     return (
         <form>
             <div className="form-group">
                 <label htmlFor="search">Search:</label>
                 <input 
-                    onChange = {{ /* need pops here */}}
-                    value={{/* need props here*/}}
+                    onChange = {props.handleInputChange}
+                    value={props.value}
                     name="search"
                     type="text"
                     className="form-control"
@@ -16,7 +16,7 @@ export default function SearchForm(){
                 />
                 <br />
                 <button
-                    onClick={{/* need props here to handle submit */}}
+                    onClick={props.handleFormSubmit}
                     className="btn btn-primary"
                     type="submit"
                 >
