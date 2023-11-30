@@ -9,8 +9,6 @@ import { useState, useEffect } from "react";
 export default function GuiContainer() {
     const [search, setSearch] = useState[""];
 
-
-
     // inputChange handler
     const handleInputChange = (event) =>{
         setSearch(event.target.value);
@@ -21,7 +19,6 @@ export default function GuiContainer() {
         event.preventDefault();
         // do something with search
     };
-
 
     return (
         <Container>
