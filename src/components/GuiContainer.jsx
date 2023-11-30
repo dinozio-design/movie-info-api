@@ -65,7 +65,7 @@ export default function GuiContainer() {
                                 released={Released}
                             />
                         ) : (
-                            <h3>No Results to Display for "{search}</h3>
+                            <h3>No Results to Display for "{search}"</h3>
                         )}
                     </Card>
                 </Column>
