@@ -9,9 +9,9 @@ export default function MovieInfo(props){
             className="img-fluid"
             style={{ margin: "0 auto"}}
             />
-            <h3>Director(s): {props.directors}</h3>
-            <h3>Genre: {props.genre}</h3>
-            <h3>Released: {props.released}</h3>
+            <h4>Director(s): {props.director}</h4>
+            <h4>Genre: {props.genre}</h4>
+            <h4>Released: {props.released}</h4>
         </div>
     );
 };
