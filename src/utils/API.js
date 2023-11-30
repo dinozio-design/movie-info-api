@@ -6,4 +6,6 @@ const search = async (query) => {
     );
 };
 
-export default { search };
+const API = { search };
+
+export default API;

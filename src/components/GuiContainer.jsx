@@ -14,19 +14,25 @@ export default function GuiContainer() {
     // promis to fetch API data
     const movieSearch = (query) =>
         API.search(query)
-        .then((res) =>setResults(res.data))
-        .catch((err) => console.error(err));
+            .then((res) => setResults(res.data))
+            .catch((err) => console.error(err));
 
+    // only renders when search changes
+    useEffect(() => {
+        movieSearch(search);
+    }, [search]);
+    
     // inputChange handler
-    const handleInputChange = (event) =>{
+    const handleInputChange = (event) => {
         setSearch(event.target.value);
     };
 
     // formSubmit handler
-    const handleFormSubmit = (event) =>{
+    const handleFormSubmit = (event) => {
         event.preventDefault();
         movieSearch(search);
     };
+
 
     return (
         <Container>
