@@ -5,9 +5,17 @@ import Container from "./Container";
 import Card from "./Card";
 import SearchForm from "./SearchForm";
 import { useState, useEffect } from "react";
+import API from "../utils/API";
 
 export default function GuiContainer() {
     const [search, setSearch] = useState[""];
+    const [results, setResults] = useState({});
+
+    // promis to fetch API data
+    const movieSearch = (query) =>
+        API.search(query)
+        .then((res) =>setResults(res.data))
+        .catch((err) => console.error(err));
 
     // inputChange handler
     const handleInputChange = (event) =>{
@@ -17,7 +25,7 @@ export default function GuiContainer() {
     // formSubmit handler
     const handleFormSubmit = (event) =>{
         event.preventDefault();
-        // do something with search
+        movieSearch(search);
     };
 
     return (
