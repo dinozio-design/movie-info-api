@@ -16,8 +16,8 @@ const styles = {
     },
     paragraphStyle:{
         fontSize: ".75em",
-        marginBlockStart: ".25em",
-        marginBlockEnd:".5em"
+        marginBlockStart: ".5em",
+        marginBlockEnd:".75em"
     },
     linkStyle:{
         color:"yellow"
