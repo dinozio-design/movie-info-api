@@ -29,7 +29,7 @@ export default function GuiContainer() {
     // only renders when search changes
     useEffect(() => {
         movieSearch(search);
-    }, [search]);
+    }, []);
 
     // inputChange handler
     const handleInputChange = (event) => {
@@ -55,8 +55,19 @@ export default function GuiContainer() {
                     </Card>
                 </Column>
                 <Column size="md-8">
-                    <Card heading={Title || "Search for a Movie to Start"}>
-                        {Title}
+                    <Card heading={Title || "Search for a Movie to Start!"}>
+                        {Title ? (
+                            <MovieInfo
+                                title={Title}
+                                src={Poster}
+                                director={Director}
+                                genre={Genre}
+                                released={Released}
+                            />
+                        ) : (
+                            <h3>No Data is Available for Your Serach "{search}" </h3>
+                        )
+                    }
                     </Card>
                 </Column>
             </Row>
