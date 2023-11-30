@@ -6,10 +6,19 @@ import Card from "./Card";
 import SearchForm from "./SearchForm";
 import { useState, useEffect } from "react";
 import API from "../utils/API";
+import MovieInfo from "./MovieInfo";
 
 export default function GuiContainer() {
-    const [search, setSearch] = useState[""];
+    const [search, setSearch] = useState("");
     const [results, setResults] = useState({});
+
+    const {
+        Title = '',
+        Poster = '',
+        Director = '',
+        Genre = '',
+        Released = '',
+    } = results;
 
     // promis to fetch API data
     const movieSearch = (query) =>
@@ -21,7 +30,7 @@ export default function GuiContainer() {
     useEffect(() => {
         movieSearch(search);
     }, [search]);
-    
+
     // inputChange handler
     const handleInputChange = (event) => {
         setSearch(event.target.value);
@@ -32,7 +41,6 @@ export default function GuiContainer() {
         event.preventDefault();
         movieSearch(search);
     };
-
 
     return (
         <Container>
@@ -47,8 +55,8 @@ export default function GuiContainer() {
                     </Card>
                 </Column>
                 <Column size="md-8">
-                    <Card>
-                        <p>this is a placeholder for output</p>
+                    <Card heading={Title || "Search for a Movie to Start"}>
+                        {Title}
                     </Card>
                 </Column>
             </Row>
