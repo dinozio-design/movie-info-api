@@ -4,11 +4,23 @@ import Column from "./Column";
 import Container from "./Container";
 import Card from "./Card";
 import SearchForm from "./SearchForm";
+import { useState, useEffect } from "react";
 
 export default function GuiContainer() {
+    const [search, setSearch] = useState[""];
 
-    // will put logic here with state and hooks
 
+
+    // inputChange handler
+    const handleInputChange = (event) =>{
+        setSearch(event.target.value);
+    };
+
+    // formSubmit handler
+    const handleFormSubmit = (event) =>{
+        event.preventDefault();
+        // do something with search
+    };
 
 
     return (
@@ -17,9 +29,9 @@ export default function GuiContainer() {
                 <Column size="md-4">
                     <Card heading="Search">
                         <SearchForm
-                            // value={search} {/* next is to implement the useState and set the value of search */}
-                            // handleInputChange={handleInputChange} {/* need to write the function for this */}
-                            // handleFormSubmit={handleFormSubmit} {/* need to write the function for this */}
+                            value={search}
+                            handleInputChange={handleInputChange}
+                            handleFormSubmit={handleFormSubmit}
                         />
                     </Card>
                 </Column>
