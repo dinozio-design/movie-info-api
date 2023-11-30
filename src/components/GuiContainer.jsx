@@ -55,7 +55,7 @@ export default function GuiContainer() {
                     </Card>
                 </Column>
                 <Column size="md-8">
-                    <Card heading={Title || "Search for a Movie to Start"}>
+                    <Card heading={Title || "Search for a Movie to Start!"}>
                         {Title}
                     </Card>
                 </Column>
