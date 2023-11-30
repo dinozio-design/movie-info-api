@@ -10,14 +10,14 @@ const styles = {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        justifyContent: "centre",
+        justifyContent: "end",
         fontSize: "calc(5px + 2vmin)",
         color: "white"
     },
     paragraphStyle:{
         fontSize: ".75em",
         marginBlockStart: ".25em",
-        marginBlockEnd:"1em"
+        marginBlockEnd:".5em"
     },
     linkStyle:{
         color:"yellow"
@@ -30,6 +30,7 @@ export default function Footer(){
             <footer style={styles.footerStyle} className="footer">
                 <p style={styles.paragraphStyle}> This app is brought to you by Sam Azimi. All Rights Reserved © 2023 </p>
                 <p style={styles.paragraphStyle}> API Key, courtesy of <a style={styles.linkStyle} href="https://omdbapi.com/">https://omdbapi.com/</a>, data provided in JSON. </p>
+                <p></p>
             </footer>
         </div>
     )
